@@ -1,3 +1,5 @@
+const { off } = require('process');
+
 module.exports = {
 	env: {
 		commonjs: true,
@@ -19,5 +21,7 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion: 'latest',
 	},
-	rules: {},
+	rules: {
+		'no-unused-vars': off,
+	},
 };
