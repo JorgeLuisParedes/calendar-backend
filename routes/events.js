@@ -4,20 +4,23 @@
 */
 
 const { Router } = require('express');
+const router = Router();
 const {
 	getEventos,
-	crearEventos,
+	crearEvento,
 	actualizarEvento,
 	eliminarEvento,
 } = require('../controllers/events');
-const router = Router();
+const { validarJWT } = require('../middlewars/validar-jwt');
 
-// Todas tienen que pasar por la validación del JWT
+// Todas tienen que pasar por la validación dek JWT
+router.use(validarJWT);
+
 // Obtener eventos
 router.get('/', getEventos);
 
 // Crear eventos
-router.post('/', crearEventos);
+router.post('/', crearEvento);
 
 // Actualizar eventos
 router.put('/:id', actualizarEvento);

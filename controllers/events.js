@@ -7,10 +7,10 @@ const getEventos = (req, res = response) => {
 	});
 };
 
-const crearEventos = (req, res = response) => {
+const crearEvento = (req, res = response) => {
 	res.json({
 		ok: true,
-		msg: 'crearEventos',
+		msg: 'crearEvento',
 	});
 };
 
@@ -28,4 +28,4 @@ const eliminarEvento = (req, res = response) => {
 	});
 };
 
-module.exports = { getEventos, crearEventos, actualizarEvento, eliminarEvento };
+module.exports = { getEventos, crearEvento, actualizarEvento, eliminarEvento };
