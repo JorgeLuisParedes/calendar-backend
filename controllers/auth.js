@@ -46,7 +46,7 @@ const loginUsuario = async (req, res = response) => {
 	const { email, password } = req.body;
 
 	try {
-		let usuario = await Usuario.findOne({ email });
+		const usuario = await Usuario.findOne({ email });
 
 		if (!usuario) {
 			return res.status(400).json({
@@ -90,6 +90,8 @@ const revalidarToken = async (req, res = response) => {
 
 	res.json({
 		ok: true,
+		uid,
+		name,
 		token,
 	});
 };
