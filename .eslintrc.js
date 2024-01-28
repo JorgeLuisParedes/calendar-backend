@@ -23,5 +23,6 @@ module.exports = {
 	},
 	rules: {
 		'no-unused-vars': 'off',
+		'n/no-path-concat': 'off',
 	},
 };
